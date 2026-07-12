@@ -1,91 +1,121 @@
-# Testing Consumer Reactions
+# Customer Engagement Experiment for Direct-Mail Campaigns
 
-## Overview
+A marketing analytics project evaluating two direct-mail campaign concepts for **MVP Health Care** using A/B experiment data. The analysis identifies which campaign better captures customer attention and provides actionable recommendations to improve future marketing performance.
 
-This notebook analyzes consumer responses to two direct-mail advertising concepts for Medicare Advantage plans. 
+> **Note:** This repository is adapted from a graduate consulting-style team project. The analysis and documentation focus on my individual analytical contributions.
 
-Rather than focusing only on which ad performs better, the goal is to understand **how consumers move from first impression to action**, and where that process breaks down.
+---
 
-## The Question
+## Business Problem
 
-If two ads promote the same product:
+MVP Health Care wanted to identify which direct-mail campaign concept would generate stronger customer engagement before launching a large-scale Medicare marketing campaign.
 
-- Which one is more likely to be opened?
-- Does stronger attention translate into action?
-- How do responses differ across demographic groups?
+Using data from a randomized A/B experiment involving approximately 1,000 respondents, this project evaluates campaign effectiveness through statistical hypothesis testing and translates analytical findings into actionable marketing recommendations.
+
+---
 
 ## Experiment Design
 
-We conducted a controlled survey experiment with **1,000 respondents**:
+- **Sample Size:** 1,000 respondents
+- **Treatment Groups:** 500 respondents per campaign
+- **Experiment Type:** Randomized A/B experiment
+- **Primary Metrics**
+  - Likelihood to Open
+  - Likelihood to Take Next Step
+- **Statistical Methods**
+  - Independent-sample t-test
+  - Two-proportion z-test
 
-- **Option A:** 500 respondents  
-- **Option B:** 500 respondents  
+---
 
-Participants rated each ad on a **1–5 Likert scale**, measuring:
-- Likelihood to open the mail
-- Likelihood to take the next step after reading
+## My Contributions
 
-### Statistical Approach
+**Analytics**
 
-To ensure reliable conclusions, we applied:
+- Cleaned and validated survey responses
+- Conducted independent-sample t-tests and proportion z-tests
+- Built Python visualizations for customer engagement metrics
 
-- Independent-sample **t-tests** for mean comparisons  
-- **Z-tests** for high-response proportions (ratings of 4 or 5)  
-- Significance level: **α = 0.05**
+**Business**
+
+- Interpreted experimental findings
+- Developed marketing recommendations
+- Presented analytical insights to client stakeholders
+
+---
 
 ## Key Findings
 
-### Option A Captures Attention
+### Higher Mail-Open Intent
 
-Option A significantly outperforms Option B on likelihood to open:
+Option A significantly outperformed Option B in attracting customer attention.
 
-- Higher average ratings  
-- Higher proportion of top scores  
-- Statistically significant differences  
+| Metric | Option A | Option B |
+|---------|----------|----------|
+| High Open Intent | **42.0%** | 33.4% |
+| Difference | **+8.6 percentage points** | |
 
-**Interpretation:**  
-Option A creates a stronger first impression and is more effective at capturing initial attention.
+![High Open Intent](images/high_open_intent.png)
 
-### Attention Does Not Convert
+---
 
-Despite Option A’s advantage at the top of the funnel:
+### Statistical Results
 
-- Both ads perform identically on next-step intention  
-- No statistically significant difference in conversion-related metrics  
+| Metric | Result |
+|---------|--------|
+| Mean Open-Intent Score | 3.03 vs. 2.75 |
+| t-test | p = 0.002 |
+| High Response Rate (4–5) | 42.0% vs. 33.4% |
+| z-test | p = 0.005 |
 
-![Screenshot 1](Screenshot%202025-12-14%20at%2017.32.53.png)
+Both statistical tests indicate that **Option A generated significantly stronger initial customer engagement.**
 
-![Screenshot 2](Screenshot%202025-12-14%20at%2017.32.41.png)
+---
 
-![Screenshot 3](Screenshot%202025-12-14%20at%2017.32.29.png)
+### Funnel Insight
 
-**Interpretation:**  
-There is a clear **conversion gap** between opening the ad and taking action.
+Although Option A attracted significantly more attention, both campaigns produced nearly identical willingness to take the next step after reading the mail.
 
-## Interpretation
+This suggests that the primary opportunity lies in improving:
 
-Option A succeeds at the top of the funnel but fails to sustain momentum.
+- Message clarity
+- Benefit communication
+- Call-to-action (CTA)
 
-The primary bottleneck is not awareness—it is:
-- Message clarity  
-- Benefit communication  
-- Call-to-action effectiveness
+rather than redesigning the overall campaign concept.
 
-## Recommendation
+---
 
-### Use Option A as the Base Creative
+## Business Recommendations
 
-Option A is recommended because it:
-- Shows statistically significant uplift
-- Builds stronger trust and clarity at first glance
-- Performs consistently across demographic segments
+Based on the analysis, we recommended adopting **Option A** while improving conversion-oriented elements inside the mail piece.
 
-However, improvements are required to drive action.
+Suggested improvements included:
 
-## Conclusion
+- Strengthen benefit hierarchy
+- Simplify customer messaging
+- Make the CTA more specific and action-oriented
+- Tailor messaging for different demographic segments
 
-This project highlights a common marketing challenge:
+---
 
-**Winning attention is not the same as winning action.**
+## Tech Stack
 
-Option A opens the door—but stronger messaging and clearer calls-to-action are required to move consumers through it.
+- Python
+- pandas
+- NumPy
+- SciPy
+- Matplotlib
+- Statistical Testing
+- A/B Experimentation
+
+---
+
+## Repository Structure
+
+```
+├── data/
+├── images/
+├── notebook/
+├── README.md
+```
