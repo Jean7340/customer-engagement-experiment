@@ -5,7 +5,7 @@ A marketing analytics project evaluating two direct-mail campaign concepts for *
 > **Note:** This repository is adapted from a graduate consulting-style team project. The analysis and documentation focus on my individual analytical contributions.
 
 <div align="center">
-<img src="figures/campaign_concepts_comparison.png" width="1000">
+<img src="figures/campaign%20concepts%20comparison.png" width="900">
 </div>
 
 ---
