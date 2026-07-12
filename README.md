@@ -27,13 +27,9 @@ MVP Health Care wanted to determine which direct-mail campaign concept would gen
 ## My Contributions
 
 • Cleaned and validated survey data
-
 • Conducted statistical hypothesis testing
-
 • Built Python visualizations
-
 • Developed business recommendations
-
 • Presented findings to client stakeholders
 
 ---
