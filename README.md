@@ -55,7 +55,9 @@ Option A significantly outperformed Option B in attracting customer attention.
 | High Open Intent | **42.0%** | 33.4% |
 | Difference | **+8.6 percentage points** | |
 
-![High Open Intent](images/high_open_intent.png)
+<div align="center">
+<img src="figures/high_open_intent_by_campaign_version.png" width="850">
+</div>
 
 ---
 
